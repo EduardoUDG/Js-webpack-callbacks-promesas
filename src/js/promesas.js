@@ -24,7 +24,7 @@ export const buscarHeroe = ( id ) => {
     if( heroe ) {
       resolve( heroe );
     } else {
-      reject(`No exite el héroe con el id ${id}`);
+      reject(`No existe el héroe con el id ${id}`);
     }
   });
 }
