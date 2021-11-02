@@ -30,6 +30,21 @@ const buscarHeroe = ( id ) => {
 }
 
 
+/*---------------------------------------*/
+//* async */
+/*---------------------------------------*/
+export const buscarHeroeAsync = async( id ) => {
+
+  const heroe = heroes[id]; 
+  if( heroe ) {
+    return heroe;
+  } else {
+    // throw `No existe el héroe con el id ${id}`;
+    throw `No existe el héroe con el id ${id}`;
+  }
+}
+
+
 const promesaLenta = new Promise((res, rej) => {
   setTimeout(() => res('Promesa lenta'), 2000);
 });
