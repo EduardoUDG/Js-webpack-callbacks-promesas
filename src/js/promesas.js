@@ -20,9 +20,8 @@ const buscarHeroe = ( id ) => {
   const heroe = heroes[id]; 
 
   return new Promise((resolve, reject) => {
-
     if( heroe ) {
-      resolve( heroe );
+      setTimeout( () => resolve(heroe), 1000)
     } else {
       reject(`No existe el héroe con el id ${id}`);
     }
